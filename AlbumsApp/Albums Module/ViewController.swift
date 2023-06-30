@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         collectionView.register(AlbumCell.self, forCellWithReuseIdentifier: AlbumCell.identifier)
         collectionView.register(RowCell.self, forCellWithReuseIdentifier: RowCell.identifier)
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.identifier)
+        collectionView.register(SectionFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: SectionFooter.identifier)
         return collectionView
     }()
 
@@ -38,7 +39,6 @@ class ViewController: UIViewController {
     private func setupViews() {
         view.backgroundColor = .white
         view.tintColor = .black
-        //title = "Albums"
         view.addSubview(collectionView)
     }
 
@@ -114,7 +114,6 @@ class ViewController: UIViewController {
                 layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 0)
                 let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(180), heightDimension: .fractionalHeight(0.5))
                 let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [layoutItem])
-                //layoutGroup.interItemSpacing = NSCollectionLayoutSpacing.fixed(5)
                 let sectionLayout = NSCollectionLayoutSection(group: layoutGroup)
                 sectionLayout.orthogonalScrollingBehavior = .groupPaging
                 return sectionLayout
@@ -143,14 +142,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCell.identifier, for: indexPath) as? AlbumCell
             cell?.cellModel = cellModel
             return cell ?? UICollectionViewCell()
-        case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RowCell.identifier, for: indexPath)
-            cell.backgroundColor = .systemBlue
-            return cell
-        case 2:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RowCell.identifier, for: indexPath)
-            cell.backgroundColor = .systemBlue
-            return cell
+        case 1, 2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RowCell.identifier, for: indexPath) as? RowCell
+            cell?.cellModel = cellModel
+            return cell ?? UICollectionViewCell()
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RowCell.identifier, for: indexPath)
             cell.backgroundColor = .systemBlue

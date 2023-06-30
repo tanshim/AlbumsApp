@@ -17,6 +17,7 @@
 		4D447ADB2A4F664400038CC7 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447ADA2A4F664400038CC7 /* AlbumCell.swift */; };
 		4D447ADD2A4F66D000038CC7 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447ADC2A4F66D000038CC7 /* RowCell.swift */; };
 		4D447ADF2A4F671B00038CC7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447ADE2A4F671B00038CC7 /* Model.swift */; };
+		4D447AE12A4F8F1900038CC7 /* SectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447AE02A4F8F1900038CC7 /* SectionFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4D447ADA2A4F664400038CC7 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		4D447ADC2A4F66D000038CC7 /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
 		4D447ADE2A4F671B00038CC7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4D447AE02A4F8F1900038CC7 /* SectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				4D447ADA2A4F664400038CC7 /* AlbumCell.swift */,
 				4D447ADC2A4F66D000038CC7 /* RowCell.swift */,
 				4D447ADE2A4F671B00038CC7 /* Model.swift */,
+				4D447AE02A4F8F1900038CC7 /* SectionFooter.swift */,
 			);
 			path = "Albums Module";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				4D447ADF2A4F671B00038CC7 /* Model.swift in Sources */,
 				4D447ADB2A4F664400038CC7 /* AlbumCell.swift in Sources */,
+				4D447AE12A4F8F1900038CC7 /* SectionFooter.swift in Sources */,
 				4D447AD62A4F65B900038CC7 /* SectionHeader.swift in Sources */,
 				4D447ADD2A4F66D000038CC7 /* RowCell.swift in Sources */,
 				4D447AC52A4F5BFC00038CC7 /* ViewController.swift in Sources */,

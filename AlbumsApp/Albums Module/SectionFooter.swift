@@ -1,5 +1,5 @@
 //
-//  SectionHeader.swift
+//  SectionFooter.swift
 //  AlbumsApp
 //
 //  Created by Sultan on 01.07.2023.
@@ -8,23 +8,22 @@
 import UIKit
 import SnapKit
 
-class SectionHeader: UICollectionReusableView {
+class SectionFooter: UICollectionReusableView {
 
-    static let identifier = "SectionHeader"
+    static let identifier = "SectionFooter"
 
     // MARK: - Outlets
 
-    lazy var title: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 26, weight: .bold)
-        return label
+    lazy var lineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGray2
+        return view
     }()
 
     // MARK: - Initializers
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        clipsToBounds = true
         setupHierarchy()
         setupLayout()
     }
@@ -36,19 +35,18 @@ class SectionHeader: UICollectionReusableView {
     // MARK: - Setup
 
     private func setupHierarchy() {
-        addSubview(title)
+        addSubview(lineView)
     }
 
     private func setupLayout() {
-        title.snp.makeConstraints { make in
-            make.bottom.equalTo(self)
-            make.left.equalTo(self)
+        lineView.snp.makeConstraints { make in
+            make.height.equalTo(1)
+            make.width.equalToSuperview()
         }
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        title.text = nil
     }
         
 }
