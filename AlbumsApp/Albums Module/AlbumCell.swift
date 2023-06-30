@@ -79,12 +79,12 @@ class AlbumCell: UICollectionViewCell {
         }
         label.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(5)
-            make.leading.equalToSuperview().offset(10)
+            make.leading.equalToSuperview().offset(5)
             make.height.equalTo(15)
         }
         countLabel.snp.makeConstraints { make in
             make.top.equalTo(label.snp.bottom).offset(5)
-            make.leading.equalToSuperview().offset(10)
+            make.leading.equalToSuperview().offset(5)
             make.height.equalTo(15)
         }
     }
