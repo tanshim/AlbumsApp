@@ -9,11 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - UI
+
+
+
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupViews()
+        setupContraints()
     }
 
+    // MARK: - Setup
+
+    private func setupViews() {
+        view.backgroundColor = .white
+    }
+
+    private func setupContraints() {
+
+    }
 
 }
-
