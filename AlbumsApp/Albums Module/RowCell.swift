@@ -49,6 +49,12 @@ class RowCell: UICollectionViewCell {
         return label
     }()
 
+    private lazy var divider: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGray2
+        return view
+    }()
+
 
     // MARK: - Lifecycle
 
@@ -77,6 +83,7 @@ class RowCell: UICollectionViewCell {
         contentView.addSubview(label)
         contentView.addSubview(chevronImageView)
         contentView.addSubview(countLabel)
+        contentView.addSubview(divider)
     }
 
     private func setupConstraints() {
@@ -99,6 +106,12 @@ class RowCell: UICollectionViewCell {
             make.trailing.equalTo(chevronImageView.snp.leading).offset(-5)
             make.centerY.equalToSuperview()
             make.height.equalTo(15)
+        }
+        divider.snp.makeConstraints { make in
+            make.leading.equalTo(label.snp.leading)
+            make.bottom.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.height.equalTo(0.5)
         }
     }
     
