@@ -12,6 +12,12 @@
 		4D447AC52A4F5BFC00038CC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447AC42A4F5BFC00038CC7 /* ViewController.swift */; };
 		4D447ACA2A4F5BFD00038CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D447AC92A4F5BFD00038CC7 /* Assets.xcassets */; };
 		4D447ACD2A4F5BFD00038CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D447ACB2A4F5BFD00038CC7 /* LaunchScreen.storyboard */; };
+		4D447AD62A4F65B900038CC7 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447AD52A4F65B900038CC7 /* SectionHeader.swift */; };
+		4D447AD92A4F65FF00038CC7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D447AD82A4F65FF00038CC7 /* SnapKit */; };
+		4D447ADB2A4F664400038CC7 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447ADA2A4F664400038CC7 /* AlbumCell.swift */; };
+		4D447ADD2A4F66D000038CC7 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447ADC2A4F66D000038CC7 /* RowCell.swift */; };
+		4D447ADF2A4F671B00038CC7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447ADE2A4F671B00038CC7 /* Model.swift */; };
+		4D447AE12A4F8F1900038CC7 /* SectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D447AE02A4F8F1900038CC7 /* SectionFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,11 @@
 		4D447AC92A4F5BFD00038CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D447ACC2A4F5BFD00038CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D447ACE2A4F5BFD00038CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D447AD52A4F65B900038CC7 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		4D447ADA2A4F664400038CC7 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		4D447ADC2A4F66D000038CC7 /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
+		4D447ADE2A4F671B00038CC7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4D447AE02A4F8F1900038CC7 /* SectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D447AD92A4F65FF00038CC7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +68,25 @@
 			children = (
 				4D447AC02A4F5BFC00038CC7 /* AppDelegate.swift */,
 				4D447AC22A4F5BFC00038CC7 /* SceneDelegate.swift */,
-				4D447AC42A4F5BFC00038CC7 /* ViewController.swift */,
+				4D447AD42A4F653F00038CC7 /* Albums Module */,
 				4D447AC92A4F5BFD00038CC7 /* Assets.xcassets */,
 				4D447ACB2A4F5BFD00038CC7 /* LaunchScreen.storyboard */,
 				4D447ACE2A4F5BFD00038CC7 /* Info.plist */,
 			);
 			path = AlbumsApp;
+			sourceTree = "<group>";
+		};
+		4D447AD42A4F653F00038CC7 /* Albums Module */ = {
+			isa = PBXGroup;
+			children = (
+				4D447AC42A4F5BFC00038CC7 /* ViewController.swift */,
+				4D447AD52A4F65B900038CC7 /* SectionHeader.swift */,
+				4D447ADA2A4F664400038CC7 /* AlbumCell.swift */,
+				4D447ADC2A4F66D000038CC7 /* RowCell.swift */,
+				4D447ADE2A4F671B00038CC7 /* Model.swift */,
+				4D447AE02A4F8F1900038CC7 /* SectionFooter.swift */,
+			);
+			path = "Albums Module";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +105,9 @@
 			dependencies = (
 			);
 			name = AlbumsApp;
+			packageProductDependencies = (
+				4D447AD82A4F65FF00038CC7 /* SnapKit */,
+			);
 			productName = AlbumsApp;
 			productReference = 4D447ABD2A4F5BFC00038CC7 /* AlbumsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 4D447AB42A4F5BFC00038CC7;
+			packageReferences = (
+				4D447AD72A4F65FF00038CC7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4D447ABE2A4F5BFC00038CC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,6 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D447ADF2A4F671B00038CC7 /* Model.swift in Sources */,
+				4D447ADB2A4F664400038CC7 /* AlbumCell.swift in Sources */,
+				4D447AE12A4F8F1900038CC7 /* SectionFooter.swift in Sources */,
+				4D447AD62A4F65B900038CC7 /* SectionHeader.swift in Sources */,
+				4D447ADD2A4F66D000038CC7 /* RowCell.swift in Sources */,
 				4D447AC52A4F5BFC00038CC7 /* ViewController.swift in Sources */,
 				4D447AC12A4F5BFC00038CC7 /* AppDelegate.swift in Sources */,
 				4D447AC32A4F5BFC00038CC7 /* SceneDelegate.swift in Sources */,
@@ -342,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D447AD72A4F65FF00038CC7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D447AD82A4F65FF00038CC7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D447AD72A4F65FF00038CC7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D447AB52A4F5BFC00038CC7 /* Project object */;
 }
